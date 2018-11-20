@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bio.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetBio.Core.3.0.0-alpha\lib\netstandard2.0\Bio.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -97,6 +100,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -115,6 +121,25 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Szunyi.Common\Szunyi.Common\Szunyi.Common.vbproj">
+      <Project>{d2d39939-3eac-4599-bf5b-41228d7e3bbf}</Project>
+      <Name>Szunyi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Szunyi.Features\Szunyi.Features\Szunyi.Features.vbproj">
+      <Project>{5ffc728c-f2bb-48de-bcd4-bb25f860bfdd}</Project>
+      <Name>Szunyi.Features</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Szunyi.IO\Szunyi.IO\Szunyi.IO.vbproj">
+      <Project>{053ecc71-e49d-4254-9a5a-7d36b3f50d37}</Project>
+      <Name>Szunyi.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Szunyi.Sequences\Szunyi.Sequences\Szunyi.Sequences.vbproj">
+      <Project>{b4503b4b-25d2-4580-84b8-febd08b9af11}</Project>
+      <Name>Szunyi.Sequences</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
